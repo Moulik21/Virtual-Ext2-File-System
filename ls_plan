@@ -1,0 +1,24 @@
+Flow/Error Handling ls:
+
+	- arguments, error check that you're passed in 3 arguments total
+	
+	- take argument from command line and check if it's valid:
+		- check if first index is a '/'
+		- strip the last '/' if it exists, and check if file exists at that path
+
+
+	- map disk image, and ensure no errors from this
+
+	- get super block, and get group descriptor
+	- find inode table from group descriptor
+
+	- use recursive function to find the inode specifically for that file name, using recursive helper function
+		- if node does not exist, return an error
+		- node will always be a directory, not a file, so dont worry about this case
+
+	- use print helper function to actually print what's at this inode, including the .. ., similar to ex10, but we only want the names, nothing more
+
+
+
+
+
